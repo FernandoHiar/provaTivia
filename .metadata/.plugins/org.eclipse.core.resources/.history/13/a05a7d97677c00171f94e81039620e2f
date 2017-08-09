@@ -1,1 +1,0 @@
-create table tbl_campanha(identificador int, descricao varchar(40), dataInicial date, dataFina date);
