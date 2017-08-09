@@ -1,0 +1,22 @@
+package br.vaga.emprego.dao;
+
+import java.sql.Connection;
+
+import javax.ws.rs.Path;
+
+import br.vaga.emprego.conexao.Conexao;
+
+@Path("CampanhasDAO")
+public class CampanhasDAO {
+	
+	@Path("consultarCampanhas")
+	public String consultarCampanhas() {
+		
+		Connection conexao = Conexao.conectarBase();
+		
+		return "";
+	}
+	
+
+
+}

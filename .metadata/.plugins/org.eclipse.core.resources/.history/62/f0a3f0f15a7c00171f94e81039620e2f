@@ -1,0 +1,21 @@
+package br.vaga.emprego.conexao;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class Conexao {
+
+	public Connection conectarBase() throws IOException, ClassNotFoundException, SQLException {
+		
+		Connection conexao = criarConexao();
+		
+		return conexao;
+	}
+	
+	private Connection criarConexao() {
+		
+	}
+	
+	
+}

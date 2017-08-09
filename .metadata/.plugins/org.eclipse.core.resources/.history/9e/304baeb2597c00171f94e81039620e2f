@@ -1,0 +1,17 @@
+package br.vaga.emprego.dao;
+
+import javax.ws.rs.HeaderParam;
+import javax.ws.rs.Path;
+
+@Path("CampanhasDAO")
+public class CampanhasDAO {
+	
+	@Path("consultarCampanhas")
+	public String consultarCampanhas(@HeaderParam("identificador")  Integer identificador) {
+		
+		System.out.println("teste");
+		
+		return "";
+	}
+
+}

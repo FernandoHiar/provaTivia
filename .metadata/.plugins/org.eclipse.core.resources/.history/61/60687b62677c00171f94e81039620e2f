@@ -1,0 +1,38 @@
+package br.vaga.emprego.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import br.vaga.emprego.conexao.Conexao;
+
+@Path("CampanhasDAO")
+public class CampanhasDAO extends Conexao {
+	
+	@Produces("text/plain")
+	@Path("consultarCampanhas")
+	public String consultarCampanhas() {
+		
+		try {
+			Connection conexao = conectarBase();
+			PreparedStatement statement =  conexao.prepareStatement("Select * from tbl_campanha");
+			ResultSet resultado =  statement.executeQuery();
+			while (resultado.next()) {
+				
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return "teste";
+	}
+	
+
+
+}

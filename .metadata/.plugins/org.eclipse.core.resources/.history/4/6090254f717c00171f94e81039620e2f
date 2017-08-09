@@ -1,0 +1,11 @@
+package br.com.vagas.emprego;
+
+import br.com.vagas.emprego.service.Servico;
+
+public class Application {
+
+	public static void main(String[] args) {
+		new Servico().doGet("");
+	}
+	
+}

@@ -1,0 +1,18 @@
+package br.vaga.emprego.dao;
+
+import javax.ws.rs.Path;
+
+@Path("CampanhasDAO")
+public class CampanhasDAO {
+	
+	@Path("consultarCampanhas")
+	public String consultarCampanhas() {
+		
+		System.out.println("teste");
+		
+		return "";
+	}
+	
+
+
+}

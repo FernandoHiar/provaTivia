@@ -1,0 +1,9 @@
+package br.vaga.emprego.utils;
+
+public class ConexaoUtils {
+
+	public static final String PROTOCOLO = "jdbc";
+	
+	
+	
+}

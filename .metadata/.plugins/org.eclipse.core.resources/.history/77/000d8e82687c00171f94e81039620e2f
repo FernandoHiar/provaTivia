@@ -1,0 +1,49 @@
+package br.vaga.emprego.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+
+import br.vaga.emprego.conexao.Conexao;
+import br.vaga.emprego.dto.CampanhaDTO;
+
+@Path("CampanhasDAO")
+public class CampanhasDAO extends Conexao {
+	
+	@Produces("text/plain")
+	@Path("consultarCampanhas")
+	public String consultarCampanhas() {
+		List<CampanhaDTO> campanhas = new ArrayList<CampanhaDTO>();
+		try {
+			Connection conexao = conectarBase();
+			PreparedStatement statement =  conexao.prepareStatement("Select * from tbl_campanha");
+			ResultSet resultado =  statement.executeQuery();
+		
+			if(resultado != null) {
+			
+				while (resultado.next()) {
+					CampanhaDTO campanha = new CampanhaDTO();
+					campanha.setIdentificador(resultado.getInt("identificador"));
+					campanha.setDescricao(resultado.getString("descricao"));
+					campanha.setDataInicial(resultado.getDate("dataInicial"));
+					campanha.setDataFinal(resultado.getDate("dataFinal"));
+					campanhas.add(campanha);
+				}
+			}
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return "teste";
+	}
+	
+
+
+}

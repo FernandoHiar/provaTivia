@@ -1,0 +1,13 @@
+package br.vaga.emprego.dao;
+
+public class CampanhasDAO {
+	
+	
+	public String consultarCampanhas(Integer identificador) {
+		
+		
+		
+		return "";
+	}
+
+}

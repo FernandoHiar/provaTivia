@@ -1,0 +1,15 @@
+package br.vaga.emprego.dao;
+
+import javax.ws.rs.Path;
+
+public class CampanhasDAO {
+	
+	@Path("CampanhaDAO/consultarCampanhas")
+	public String consultarCampanhas(Integer identificador) {
+		
+		
+		
+		return "";
+	}
+
+}

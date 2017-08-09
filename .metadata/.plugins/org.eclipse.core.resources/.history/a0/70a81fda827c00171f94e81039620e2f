@@ -1,0 +1,21 @@
+package br.com.vagas.emprego;
+
+import java.io.IOException;
+
+import br.com.vagas.emprego.service.Servico;
+
+public class Application {
+	
+	public static void main(String[] args) {
+		String json = "";
+		try {
+			json = new Servico().doGet("http://192.168.15.16:8080/campanhaServer/CampanhasDAO/consultarCampanhas");
+			System.out.println(json);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}
